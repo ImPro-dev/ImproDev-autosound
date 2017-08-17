@@ -5,7 +5,7 @@
         "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
         "magento/theme-frontend-blank": "100.1.*",
         "magento/framework": "100.1.*",
-        "improdev/servicemodule": "1.0.0"
+        "improdev/servicemodule": "dev-master"
     },
     "minimum-stability": "dev",
     "type": "magento2-theme",
