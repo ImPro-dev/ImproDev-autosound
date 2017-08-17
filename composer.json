@@ -4,7 +4,8 @@
     "require": {
         "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
         "magento/theme-frontend-blank": "100.1.*",
-        "magento/framework": "100.1.*"
+        "magento/framework": "100.1.*",
+        "improdev/theme-frontend-autosound": "dev-master"
     },
     "minimum-stability":"dev",
     "type": "magento2-theme",
