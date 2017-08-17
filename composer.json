@@ -6,6 +6,7 @@
         "magento/theme-frontend-blank": "100.1.*",
         "magento/framework": "100.1.*"
     },
+    "minimum-stability":"dev",
     "type": "magento2-theme",
     "version": "1.0.0",
     "license": [
