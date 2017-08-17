@@ -7,7 +7,7 @@
         "magento/framework": "100.1.*",
         "improdev/theme-frontend-autosound": "dev-master"
     },
-    "minimum-stability":"dev",
+    "minimum-stability":"dev-master",
     "type": "magento2-theme",
     "version": "1.0.0",
     "license": [
