@@ -110,7 +110,6 @@ define([
             priceBlocks.each(function () {
                 var price = $(this)[0].innerText;
                 var priceArray = price.split('\xa0');
-                console.log(1 in priceArray);
                 if(1 in priceArray && priceArray[1].length) {
                     priceArray[1] = '<span class="currency-symbol">' + priceArray[1] + '</span>';
                     $(this).html(priceArray.join(' '));
