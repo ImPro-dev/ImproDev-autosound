@@ -1,0 +1,57 @@
+
+//
+//  Local variables
+//  _____________________________________________
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .switcher-language {
+    ul.switcher-dropdown {
+      li {
+        padding: 0 10px;
+        display: inline-block;
+
+        span, a {
+          display: inline-block;
+          position: relative;
+          padding: 0 2px;
+          .lib-css(transition, all .1s, 1);
+
+          &::after {
+            .lib-css(transition, all .2s, 1);
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            margin-bottom: -12px;
+            background: @color-primary;
+          }
+        }
+
+        &.active span,
+        a:hover {
+          color: @color-gray20;
+
+          &::after {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

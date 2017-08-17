@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/owl.carousel.css" />
+    </head>
+    <body>
+        <referenceContainer name="product.info.main">
+            <container name="product.info.block" htmlTag="div" htmlClass="product-info-block" before="-" />
+        </referenceContainer>
+
+        <move element="product.info.price" destination="product.info.block" before="-" />
+        <move element="product.info" destination="product.info.block" after="product.info.price" />
+        <move element="product.info.overview" destination="product.info.block" after="product.info" />
+        <move element="product.info.extrahint" destination="product.info.block" after="product.info.overview" />
+
+        <move element="product.info.stock.sku" destination="product.info.main" before="-" />
+        <move element="product.info.review" destination="product.info.main" after="product.info.stock.sku" />
+
+        <move element="catalog.product.related" destination="content" after="product.info.media" />
+        <move element="reviews.tab" destination="content" after="product.info.details" />
+
+        <referenceBlock name="view.addto.wishlist" remove="true" />
+        <referenceBlock name="product.info.mailto" remove="true" />
+
+        <referenceBlock name="product.info.addto">
+            <block class="Magento\Cms\Block\Block" name="share_product" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">share_product</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

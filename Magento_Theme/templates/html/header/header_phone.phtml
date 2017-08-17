@@ -1,0 +1,44 @@
+<?php
+/**
+ * Copyright © 2017 ImproDev, Inc. All rights reserved.
+ *
+ * Header Phone template
+ */
+
+?>
+
+<div class="header-phone-block">
+    <select class="header-phone" data-mage-init='{"customSelect":{}}'>
+        <option>0-800-30-15-85</option>
+        <option>0-800-30-15-86</option>
+        <option>0-800-30-15-87</option>
+        <option>0-800-30-15-88</option>
+    </select>
+    <div class="back-call-button">
+        <span id="back-call-trigger">
+            <strong><?php /* @escapeNotVerified */ echo __('Back Call'); ?></strong>
+        </span>
+        <div id="call-me" data-mage-init='{"dropdownDialog":{
+                    "appendTo":".back-call-button",
+                    "triggerTarget":"#back-call-trigger",
+                    "closeOnMouseLeave": false,
+                    "triggerClass":"active",
+                    "parentClass":"active",
+                    "show": {
+                        "effect": "fade",
+                        "duration": 300
+                    },
+                    "hide": {
+                      "effect": "fade",
+                      "duration": 300
+                    },
+                    "buttons":null}}' style="display: none;">
+            <form action="#" method="post">
+                <h4><?php  /* @escapeNotVerified */ echo __('Do you have any questions?') ?></h4>
+                <strong><?php  /* @escapeNotVerified */ echo __('Our manager will contact you in 30 seconds') ?></strong>
+                <input type="text" name="phone" placeholder="<?php  /* @escapeNotVerified */ echo __('My phone') ?> +XX-XXX-XXX-XX-XX">
+                <button type="button"><?php  /* @escapeNotVerified */ echo __('Call Me') ?></button>
+            </form>
+        </div>
+    </div>
+</div>

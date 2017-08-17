@@ -1,0 +1,406 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+  // Header Panel
+  .panel.wrapper  {
+    .switcher-city {
+
+      .lib-vendor-prefix-flex-grow(1);
+
+      .switcher-label {
+        padding-right: 14px;
+        color: @color-gray85;
+      }
+
+      &, .select {
+        height: 44px;
+      }
+
+      select {
+        display: none;
+      }
+      .select {
+        width: 77px;
+        border-right: solid 1px @color-gray82;
+        border-left: solid 1px @color-gray82;
+      }
+      .select-options {
+        right: -35px;
+        left: -1px;
+      }
+    }
+    .header-panel-links {
+      display: none;
+    }
+  }
+  .header.content .header-panel-links {
+    float: right;
+    margin: 2px 0 0 8px;
+    position: relative;
+
+    .panel-links-trigger {
+      font-size: 28px;
+      color: @color-gray56;
+    }
+
+    ul {
+      position: absolute;
+      .lib-css(box-shadow, 0px 0px 5px 0px rgba(200,200,200,1));
+      z-index: 10;
+      background: @color-white;
+      right: 0;
+      width: 170px;
+      top: 100%;
+      border: solid 1px @color-gray95;
+
+      li {
+        a{
+          display: block;
+          padding: 10px 12px;
+          border-bottom: solid 1px @color-gray95;
+
+          &:hover {
+            background: @color-gray95;
+          }
+        }
+
+        &:last-child a{
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // Minicart
+  .minicart-wrapper {
+    float: none;
+    margin-top: 0;
+    width: 24%;
+
+
+    .counter-label {
+      display: none;
+    }
+
+    .action.showcart,
+    .action.showcart.active{
+      .lib-css(transition, all .2s, 1);
+      text-align: center;
+
+      .lib-icon-font(
+        @icon-shopping-cart,
+        @_icon-font: @icons__font-name-outicons,
+        @_icon-font-size: 30px,
+        @_icon-font-color-hover: @primary__theme-color,
+        @_icon-font-color-active: false,
+        @_icon-font-line-height: 29px,
+        @_icon-font-text-hide: false,
+        @_icon-font-position: before,
+        @_icon-font-display: block
+      );
+
+      &:before {
+        .lib-css(transition, all .2s, 1);
+        display: block;
+      }
+
+      .text,
+      .counter-label {
+        &:extend(.abs-visually-hidden-reset all);
+      }
+    }
+
+  }
+
+  // User Block
+
+  .user-block-links {
+    .lib-list-inline();
+    display: inline-block;
+    vertical-align: top;
+    width: 74%;
+    text-align: center;
+
+    li {
+      width: 32%;
+
+      &.compare {
+        a{
+          .lib-icon-font(
+            @icon-compare,
+            @_icon-font: @icons__font-name-fontawesome,
+            @_icon-font-size: @user-block_icon-size,
+            @_icon-font-color-active: false,
+            @_icon-font-line-height: @user-block_icon-lineheight,
+            @_icon-font-color-hover: @primary__theme-color,
+            @_icon-font-text-hide: false,
+            @_icon-font-position: before,
+            @_icon-font-display: block
+          );
+
+          &:before {
+            display: block;
+          }
+        }
+      }
+      &.wishlist {
+        a{
+          .lib-icon-font(
+            @icon-wishlist,
+            @_icon-font: @icons__font-name-outicons,
+            @_icon-font-size: @user-block_icon-size,
+            @_icon-font-line-height: @user-block_icon-lineheight,
+            @_icon-font-color-hover: @primary__theme-color,
+            @_icon-font-color-active: false,
+            @_icon-font-text-hide: false,
+            @_icon-font-position: before,
+            @_icon-font-display: block
+          );
+
+          &:before {
+            display: block;
+          }
+        }
+      }
+
+      a.garage-link {
+        .lib-icon-font(
+          @icon-garage,
+          @_icon-font: @icons__font-name-outicons,
+          @_icon-font-size: @user-block_icon-size,
+          @_icon-font-line-height: @user-block_icon-lineheight,
+          @_icon-font-color-hover: @primary__theme-color,
+          @_icon-font-color-active: false,
+          @_icon-font-text-hide: true,
+          @_icon-font-position: before,
+          @_icon-font-display: block
+        );
+
+        &:before {
+          display: block;
+        }
+      }
+    }
+
+  }
+
+  .user-block {
+    clear: both;
+    border-top: 1px solid @border-color__base;
+    border-bottom: 1px solid @border-color__base;
+    margin: 0 -@layout__width-xs-indent -1px;
+    padding: 10px @layout__width-xs-indent;
+
+    li > a,
+    .showcart .text{
+      font-size: @font-size__s;
+      position: relative;
+      .lib-css(transition, all .2s, 1);
+
+      &::before {
+        .lib-css(transition, all .2s, 1);
+        z-index:2;
+        top: 0;
+        position: relative;
+      }
+    }
+    a:hover {
+      &::before {
+        transform: scale(0.85);
+        color: @secondary__theme-color;
+      }
+    }
+
+    .minicart-wrapper .action.showcart .counter.qty,
+    .counter {
+      position: absolute;
+      top: -1px;
+      right: 7px;
+      height: 16px;
+      min-width: 16px;
+      margin: 0;
+      box-sizing: border-box;
+      z-index: 4;
+      text-align: center;
+      line-height: 16px;
+      padding: 0 4px;
+      color: @color-white;
+      .lib-css(border-radius, 20px, 1);
+      font-size: 10px;
+      background: @primary__theme-color;
+    }
+  }
+
+  .header.content {
+    .header-phone-block {
+      margin-bottom: 10px;
+      float: right;
+
+      .select {
+        font-size: @font-size__s;
+        font-weight: bold;
+        width: 135px;
+        float: left;
+
+        .select-options li {
+          font-weight: @font-weight__regular;
+          font-size: @font-size__base;
+        }
+
+        .select-styled {
+          background: none;
+          padding: 5px 25px 5px 15px;
+        }
+      }
+    }
+  }
+
+  .back-call-button {
+    position: relative;
+    float: left;
+
+    #back-call-trigger {
+      display: inline-block;
+      border: solid 2px @secondary__theme-color;
+      padding: 6px 18px;
+      cursor: pointer;
+      .lib-css(transition, all .2s, 1);
+
+      &:hover {
+        background: @secondary__theme-color;
+      }
+
+      strong {
+        font-weight: @font-weight__regular;
+      }
+
+    }
+
+    .ui-dialog {
+      position: absolute;
+      .lib-css(box-shadow, 0px 0px 5px 0px rgba(200,200,200,1));
+      z-index: 9;
+      background: @color-white;
+      padding: 20px;
+      width: 210px;
+      right: 0;
+      top: 130%;
+      border: solid 1px @color-gray95;
+
+      h4 {
+        margin: 0 0 20px;
+        font-size: @font-size__xl;
+      }
+
+      strong {
+        font-weight: @font-weight__regular;
+        display: block;
+        padding-bottom: 10px;
+      }
+
+      input {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+  .header.content {
+    .header-phone-block {
+      float: none;
+
+      .select {
+        float: left;
+        width: 165px;
+        font-size: @font-size__l;
+      }
+    }
+  }
+
+  .user-block {
+
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+
+    .minicart-wrapper, .user-block-links {
+      text-align: left;
+      width: auto;
+    }
+
+    .minicart-wrapper {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .user-block-links {
+      li {
+        width: auto;
+        margin-right: 25px;
+      }
+    }
+  }
+  .panel.wrapper {
+    .header-panel-links {
+      display: block;
+      float: left;
+      li {
+        display: inline-block;
+        margin-right: 15px;
+
+        &:before {
+        }
+
+        a {
+          position: relative;
+          display: inline-block;
+          height: 100%;
+          .lib-css(transition, all .2s, 1);
+
+          &:hover {
+            text-decoration: none;
+            color: @color-primary;
+
+          }
+        }
+      }
+    }
+
+    .switcher-language {}
+  }
+}
+
+//
+//  Desktop screen > 1200px
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__custom) {
+  .panel.wrapper {
+    .header-panel-links {
+      li {
+        margin-right: 31px;
+      }
+    }
+  }
+
+  .back-call-button {
+    .ui-dialog {
+      width: 320px;
+    }
+  }
+}
+

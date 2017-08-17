@@ -1,0 +1,206 @@
+
+// Colors
+@color-gray92: #e9eaeb;
+@color-gray95: #eff0f3;
+@color-gray85: #555555;
+@color-gray47: #777777;
+@color-gray60: #999999;
+@color-primary: #fb2539;
+@active__color: @color-primary;
+@primary__theme-color: @color-primary;
+@secondary__theme-color: #ffdc2c;
+@secondary__color-text: #777777;
+
+
+@form-element-input-placeholder__color: #999999;
+
+
+@page__background-color: #474a4e;
+@page__main-color: @color-white;
+@submenu-desktop__background: @page__main-color;
+@border-color__base: darken(@page__main-color, 18%);
+
+// Layout
+@layout__max-width: 1330px;
+
+// Typography
+@link__color: @color-gray20;
+@link__hover__color: @color-gray47;
+@link__hover__text-decoration: none;
+@link__active__text-decoration: none;
+@list__margin-bottom: 0;
+@list-item__margin-bottom: 0;
+
+// H1
+@h1__font-size-desktop: 34px;
+
+//  Fonts
+
+@font-size__base: 13px;
+//@font-family__base: @font-family-name__base;
+
+// Fonts Icon
+@icons__font-name-outicons: 'fl-outicons';
+@icons__font-name-fontawesome: 'FontAwesome';
+
+// Buttons
+//______________________________
+
+@button__font-size: 15px;
+@button__border-radius: 0;
+@button__padding: 11px 23px;
+
+//  Default = secondary button
+@button__color: @primary__color;
+@button__background: @secondary__theme-color;
+@button__border: 1px solid @secondary__theme-color;
+@button__gradient-color-start: false;
+@button__gradient-color-end: false;
+
+@button__hover__color: @color-white;
+@button__hover__background: @primary__theme-color;
+@button__hover__border: 1px solid @primary__theme-color;
+@button__hover__gradient-color-start: false;
+@button__hover__gradient-color-end: false;
+
+@button__active__color: @color-white;
+@button__active__background: @button__hover__background;
+@button__active__border: @button__hover__border;
+@button__active__gradient-color-start: false;
+@button__active__gradient-color-end: false;
+
+//  Primary button
+@button-primary__line-height: false;
+@button-primary__width: false;
+@button-primary__margin: false;
+@button-primary__padding: @button__padding;
+@button-primary__gradient: false;
+@button-primary__gradient-direction: false;
+
+@button-primary__background: @primary__theme-color;
+@button-primary__border: 1px solid @primary__theme-color;
+@button-primary__color: @color-white;
+@button-primary__gradient-color-start: false;
+@button-primary__gradient-color-end: false;
+
+@button-primary__hover__background: @secondary__theme-color;
+@button-primary__hover__border: 1px solid @secondary__theme-color;
+@button-primary__hover__color: @color-gray20;
+@button-primary__hover__gradient-color-start: false;
+@button-primary__hover__gradient-color-end: false;
+
+@button-primary__active__background: darken(@secondary__theme-color, 6);
+@button-primary__active__border: @button-primary__hover__border;
+@button-primary__active__color: @color-gray20;
+@button-primary__active__gradient-color-start: false;
+@button-primary__active__gradient-color-end: false;
+
+
+// Custom Select
+@select-color: @color-gray20;
+@select-background: @color-gray95;
+@select-width: 200px;
+@select-height: 34px;
+
+//  Navigation
+@nav-section__background: #3c3f43;
+@navigation-level0-item__font-size: 14px;
+@navigation-level0-item__font-weight: @font-weight__regular;
+@navigation-level0-item__active__border-color: @primary__theme-color;
+@navigation-level0-item__text-transform: capitalize;
+
+@navigation-desktop__font-size: 15px;
+@navigation-desktop__font-weight: @font-weight__regular;
+@navigation-desktop-level0-item__line-height: 50px;
+@navigation-desktop-level0-item__active__border-color: @primary__theme-color;
+@navigation-desktop-level0-item__padding: 0 20px;
+@navigation-desktop-level0-item__hover__background: @color-gray95;
+
+@submenu-item__active__border-color: @primary__theme-color;
+@submenu-desktop__box-shadow: 0 0 0 rgba(0, 0, 0, .19);
+@submenu-desktop__font-weight: @font-weight__regular;
+@submenu-desktop-item__padding: 14px @indent__base;
+
+@submenu-desktop-item__active__border-color: @secondary__theme-color;
+@submenu-item__active__border-color: @primary__theme-color;
+@submenu-item__active__border-width: 0;
+//@submenu-item__active__border: 2px;
+@submenu-item__active__background: @color-gray95;
+
+
+//
+//  Breadcrumbs variables
+//  _____________________________________________
+
+@breadcrumbs__font-size: 13px;
+@breadcrumbs-link__color: @breadcrumbs-current__color;
+@breadcrumbs-link__visited__color: @breadcrumbs-current__color;
+@breadcrumbs-link__hover__text-decoration: none;
+
+
+//
+//  Ratings
+//  _____________________________________________
+
+@rating-icon__font-size: 18px;
+@rating-icon__letter-spacing: 2px;
+@rating-icon__color: @color-gray78;
+
+@rating-icon__active__color: @secondary__theme-color;
+
+
+//
+//  Tabs
+//  ---------------------------------------------
+
+//  Tabs controls
+@tab-control__font-size: 15px;
+@tab-control__font-family: false;
+@tab-control__font-weight: @font-weight__semibold;
+@tab-control__font-style: false;
+@tab-control__line-height: @tab-control__height;
+@tab-control__height__base: @line-height__computed;
+@tab-control__height: @indent__base;
+@tab-control__margin-right: 67px;
+@tab-control__padding-top: @indent__xs;
+@tab-control__padding-right: 0;
+@tab-control__padding-bottom: 22px;
+@tab-control__padding-left: 0;
+@tab-control__border-color: @tab-control__base-color;
+@tab-control__border-width: 2px;
+@tab-control__base-color: @color-gray92;
+
+
+@accordion-control__padding-bottom: 2px;
+@accordion-content__padding: 15px;
+@accordion-control__background-color: none;
+@accordion-control__active__background-color: @color-gray92;
+
+//  Current tab
+@tab-control__background-color: none;
+@tab-control__color: @primary__theme-color;
+
+
+//  Current tab
+@tab-control__background-color: @panel__background-color;
+@tab-control__color: @text__color__muted;
+@tab-control__text-decoration: none;
+
+@tab-control__hover__background-color: none;
+@tab-control__hover__color: @color-gray85;
+@tab-control__hover__text-decoration: @tab-control__text-decoration;
+
+@tab-control__active__background-color: none;
+@tab-control__active__color: @primary__theme-color;
+@tab-control__active__text-decoration: @tab-control__text-decoration;
+
+@tab-content__background-color: @tab-control__active__background-color;
+@tab-content__border-top-status: false;
+@tab-content__border: @tab-control__border-width solid @tab-control__border-color;
+@tab-content__margin-top: @tab-control__height - @tab-control__border-width + @tab-control__padding-top + @tab-control__padding-bottom;
+@tab-content__padding-top: 33px;
+@tab-content__padding-right: 0;
+@tab-content__padding-bottom: @tab-content__padding-top;
+@tab-content__padding-left: 0;
+
+@tab-content__table-row-odd: #eff0f3;

@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2017 ImproDev, Inc. All rights reserved.
+ *
+ * City switcher template
+ */
+?>
+
+<div class="city switcher-city" id="switcher-city">
+    <strong class="switcher-label"><span><?php /* @escapeNotVerified */ echo __('Your city') ?>:</span></strong>
+    <div class="actions dropdown options switcher-options">
+        <form action="#" method="post">
+            <select data-mage-init='{"customSelect":{}}'>
+                <option><?php /* @escapeNotVerified */ echo __('Kyiv') ?></option>
+                <option><?php /* @escapeNotVerified */ echo __('Mykolaiv') ?></option>
+            </select>
+        </form>
+    </div>
+</div>

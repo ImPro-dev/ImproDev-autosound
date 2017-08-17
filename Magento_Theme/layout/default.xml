@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Header Panel -->
+        <referenceContainer name="header.panel">
+            <block class="Magento\Cms\Block\Block" name="header_panel_links" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_panel_links</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template"
+                   name="city-switcher"
+                   template="Magento_Theme::html/header/city_switcher.phtml" after="store.settings.language" />
+        </referenceContainer>
+
+        <referenceBlock name="top.links">
+            <referenceBlock name="header" remove="true" />
+        </referenceBlock>
+        <move element="top.links" destination="header.panel" after="-" />
+        <move element="authorization-link" destination="top.links" before="-" />
+
+        <!-- Header Wrapper -->
+        <referenceContainer name="header-wrapper">
+            <container name="user-block" label="User Block" as="user-block" htmlTag="div" htmlClass="user-block" after="header-phone">
+                <container name="user-block-links" label="User Block Links" as="user-block-links" htmlTag="ul" htmlClass="user-block-links">
+                    <block class="\Magento\Framework\View\Element\Html\Link" name="garage" before="-">
+                        <arguments>
+                            <argument name="class" xsi:type="string" translate="true">garage-link</argument>
+                            <argument name="label" xsi:type="string" translate="true">Garage</argument>
+                            <argument name="path" xsi:type="string" translate="false">garage</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+            <block class="Magento\Framework\View\Element\Template"
+                   name="header-phone"
+                   template="Magento_Theme::html/header/header_phone.phtml" after="top.search" />
+        </referenceContainer>
+        <move element="wish-list-link" destination="user-block-links" after="garage" />
+        <move element="catalog.compare.link" destination="user-block-links" after="wish-list-link" />
+        <move element="minicart" destination="user-block" after="catalog.compare.link" />
+        <move element="top.search" destination="header-wrapper" after="logo" />
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.jpg</argument>
+                <argument name="logo_img_width" xsi:type="number">234</argument>
+                <argument name="logo_img_height" xsi:type="number">112</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- Menu section -->
+
+        <referenceBlock name="page.top">
+            <container name="nav-section" label="Nav Section" as="nav.section" htmlTag="div" htmlClass="nav-section" before="-">
+                <container name="nav-container" label="Nav Container" as="nav.container" htmlTag="div" htmlClass="nav-container" before="-">
+                    <block class="Magento\Cms\Block\Block" name="nav_block" after="-">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">nav_block</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+        </referenceBlock>
+        <move element="navigation.sections" destination="nav-container" before="-" />
+
+        <referenceContainer name="footer">
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="form.subscribe" remove="true" />
+            <referenceBlock name="report.bugs" remove="true"/>
+            <container name="footer-column-1" label="Column 1" as="column-1" htmlTag="div" htmlClass="column-1" before="-">
+                <container name="footer-info" label="Footer Info" htmlTag="div" htmlClass="footer-info" before="-">
+                    <container name="footer-categories" htmlTag="div" htmlClass="footer-list" before="-">
+                        <block class="ImproDev\ServiceModule\Block\CategoriesCollection"
+                               name="categories-collection" template="ImproDev_ServiceModule::store-categories.phtml">
+                            <arguments>
+                                <argument name="column_items_count" xsi:type="string">7</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <block class="Magento\Cms\Block\Block" name="footer-block-1" after="footer-categories">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-block-1</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="copyright-block" label="Copyright Block" htmlTag="div" htmlClass="copyright-blok" after="footer-info">
+                    <block class="Magento\Cms\Block\Block" name="designed-by">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">designed-by</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+            <container name="footer-column-2" label="Column 2" as="column-2" htmlTag="div" htmlClass="column-2" after="footer-column-1">
+                <block class="Magento\Cms\Block\Block" name="footer-block-2" before="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-block-2</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <move element="copyright" destination="copyright-block" after="-"/>
+
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="theme-scripts"
+                   template="Magento_Theme::html/theme-scripts.phtml" />
+        </referenceContainer>
+    </body>
+</page>
