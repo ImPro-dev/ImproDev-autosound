@@ -7,7 +7,7 @@
         "magento/framework": "100.1.*",
         "improdev/servicemodule": "dev-master"
     },
-    "minimum-stability":"dev-master",
+    "minimum-stability":"dev",
     "type": "magento2-theme",
     "version": "1.0.0",
     "license": [
