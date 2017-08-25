@@ -7,7 +7,11 @@
 
 <?php
 
-$productHelper = $this->helper('ImproDev\ServiceModule\Helper\Data');
+$isServiceModule = false;
+if(class_exists('ImproDev\ServiceModule\Helper\Data')) {
+    $productHelper = $this->helper('ImproDev\ServiceModule\Helper\Data');
+    $isServiceModule = true;
+}
 
 switch ($type = $block->getType()) {
 
@@ -195,7 +199,7 @@ switch ($type = $block->getType()) {
                     <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="item product product-item">' : '</li><li class="item product product-item">' ?>
                 <?php endif; ?>
                 <div class="product-item-info <?php /* @escapeNotVerified */ echo $available; ?>">
-                    <?php  /* @escapeNotVerified */ echo $productHelper->getSaleLabel($_item->getPrice(), $_item->getFinalPrice()); ?>
+                    <?php /* @escapeNotVerified */ echo $isServiceModule ? $productHelper->getSaleLabel($_item->getPrice(), $_item->getFinalPrice()) : ''; ?>
                     <?php /* @escapeNotVerified */ echo '<!-- ' . $image . '-->' ?>
                     <a href="<?php /* @escapeNotVerified */ echo $block->getProductUrl($_item) ?>" class="product photo product-item-photo">
                         <?php echo $block->getImage($_item, $image)->toHtml(); ?>
@@ -203,8 +207,8 @@ switch ($type = $block->getType()) {
                     <div class="product-info">
                         <?php echo '<span class="sku">' . __('SKU') . ' : ' . $_item->getSku() . '</span>'; ?>
                         <?php if ($_item->getIsSalable()): ?>
-                            <?php if ($productHelper->getProductQty($_item->getId()) <= $residueProducts): ?>
-                                <span class="stock ends"><?php /* @escapeNotVerified */ echo __('Ends') ?></span>
+                            <?php if ($isServiceModule && $productHelper->getProductQty($_item->getId()) <= $residueProducts): ?>
+                                <span class="stock ends"><?php /* @escapeNotVerified */ echo __('Ends'); ?></span>
                             <?php else: ?>
                                 <span class="stock available"><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
                             <?php endif; ?>

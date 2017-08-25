@@ -76,14 +76,6 @@
             <referenceBlock name="report.bugs" remove="true"/>
             <container name="footer-column-1" label="Column 1" as="column-1" htmlTag="div" htmlClass="column-1" before="-">
                 <container name="footer-info" label="Footer Info" htmlTag="div" htmlClass="footer-info" before="-">
-                    <container name="footer-categories" htmlTag="div" htmlClass="footer-list" before="-">
-                        <block class="ImproDev\ServiceModule\Block\CategoriesCollection"
-                               name="categories-collection" template="ImproDev_ServiceModule::store-categories.phtml">
-                            <arguments>
-                                <argument name="column_items_count" xsi:type="string">7</argument>
-                            </arguments>
-                        </block>
-                    </container>
                     <block class="Magento\Cms\Block\Block" name="footer-block-1" after="footer-categories">
                         <arguments>
                             <argument name="block_id" xsi:type="string">footer-block-1</argument>

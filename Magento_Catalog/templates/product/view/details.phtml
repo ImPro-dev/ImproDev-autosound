@@ -6,14 +6,18 @@
 
 // @codingStandardsIgnoreFile
 
-$productHelper = $this->helper('ImproDev\ServiceModule\Helper\Data');
+$isServiceModule = false;
+if(class_exists('ImproDev\ServiceModule\Helper\Data')) {
+    $productHelper = $this->helper('ImproDev\ServiceModule\Helper\Data');
+    $isServiceModule = true;
+}
 
 ?>
 <?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')):?>
     <div class="product info detailed">
         <?php $layout = $block->getLayout(); ?>
         <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
-            <?php $detailedInfoGroup = $productHelper->resortInfoGroup($detailedInfoGroup); ?>
+            <?php $detailedInfoGroup = $isServiceModule ? $productHelper->resortInfoGroup($detailedInfoGroup) : $detailedInfoGroup; ?>
             <?php foreach ($detailedInfoGroup as $name):?>
                 <?php
                     $html = $layout->renderElement($name);
