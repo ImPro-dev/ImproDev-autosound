@@ -509,7 +509,7 @@ To,До,module,Magento_Backend
 Export,Экспорт,module,Magento_Backend
 "Please correct the column format and try again.","Исправьте формат столбцов и повторите попытку.",module,Magento_Backend
 "Please select items.","Пожалуйста, выберите элементы.",module,Magento_Backend
-Submit,Отправить,module,Magento_Backend
+"Submit","Отправить",module,Magento_Backend
 "Unknown block type","Неизвестный тип блока",module,Magento_Backend
 "Please correct the tab configuration and try again. Tab Id should be not empty","Пожалуйста исправьте конфигурацию вкладки и повторите попытку. ID вкладки не должен быть пустым",module,Magento_Backend
 "Please correct the tab configuration and try again.","Исправьте настройки вкладки и повторите попытку.",module,Magento_Backend
@@ -3268,13 +3268,13 @@ Comparable,Comparable,module,Magento_ConfigurableProductStaging
 "Thanks for contacting us with your comments and questions. We'll respond to you very soon.","Спасибо за обращение к нам с вашими комментариями и вопросами. Мы ответим вам очень скоро.",module,Magento_Contact
 "We can't process your request right now. Sorry, that's all we know.","Мы не можем обработать ваш запрос прямо сейчас. К сожалению, это все что мы знаем.",module,Magento_Contact
 "* Required Fields","* Обязательные поля",module,Magento_Contact
-"Write Us","Write Us",module,Magento_Contact
-"Jot us a note and we’ll get back to you as quickly as possible.","Jot us a note and we’ll get back to you as quickly as possible.",module,Magento_Contact
+"Write Us","Написать нам",module,Magento_Contact
+"Jot us a note and we’ll get back to you as quickly as possible.","Оставьте нам сообщение, и мы свяжемся с вами как можно быстрее.",module,Magento_Contact
 Name,Название,module,Magento_Contact
 Email,"Электронная почта",module,Magento_Contact
 "Phone Number","Номер телефона",module,Magento_Contact
-"What’s on your mind?","What’s on your mind?",module,Magento_Contact
-Submit,Submit,module,Magento_Contact
+"What’s on your mind?","Сообщение",module,Magento_Contact
+"Submit","Отправить",module,Magento_Contact
 "Contact Form","Contact Form",module,Magento_Contact
 "Name: %name","Name: %name",module,Magento_Contact
 "Email: %email","Email: %email",module,Magento_Contact
@@ -12646,4 +12646,5 @@ Footer,Footer,theme,frontend/Magento/luma
 "Buy","Купить",
 "Viewed products","Просмотренные продукты",
 "All viewed products","Все просмотренные товары",
-"All ","Все "
+"All ","Все ",
+"Submit","Отправить"
