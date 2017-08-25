@@ -14,12 +14,6 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
-    "repositories":[
-        {
-            "type":"git",
-            "url":"https://github.com/ImPro-dev/ImproDev-autosound.git"
-        }
-    ],
     "autoload": {
         "files": [
             "registration.php"
